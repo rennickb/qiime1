@@ -44,34 +44,45 @@ pip install qiime                       #this sent a list of errors after "Colle
                                             #/mnt/home/rennickb/anaconda3/envs/qiime1/lib/python2.7/site-packages/pip/_vendor/pep517/_in_process.py 
                                             #get_requires_for_build_wheel /tmp/tmpFIIrEd Check the logs for full command output.
                                             
-conda install qiime -c bioconda       #tried this again and it mostly worked.... 
-                                      #QIIME base install test results
-                                      #===============================
-                                      #F.......F
-                                      #======================================================================
-                                      #FAIL: test_FastTree_supported_version (__main__.QIIMEDependencyBase)
-                                      #FastTree is in path and version is supported
-                                      #----------------------------------------------------------------------
-                                      #Traceback (most recent call last):
-                                      #File "/mnt/home/rennickb/anaconda3/envs/qiime1/bin/print_qiime_config.py", line 343, 
-                                      #in test_FastTree_supported_version 
-                                      #"which components of QIIME you plan to use.")
-                                      #AssertionError: FastTree not found. This may or may not be a problem depending on which components of QIIME you plan to use.
-                                      #======================================================================
-                                      #FAIL: test_uclust_supported_version (__main__.QIIMEDependencyBase)
-                                      #uclust is in path and version is supported
-                                      #----------------------------------------------------------------------
-                                      #Traceback (most recent call last):
-                                      #  File "/mnt/home/rennickb/anaconda3/envs/qiime1/bin/print_qiime_config.py", line 322, 
-                                      #in test_uclust_supported_version
-                                      #"which components of QIIME you plan to use.")
-                                      #AssertionError: uclust not found. This may or may not be a problem depending on which components of QIIME you plan to use.
-                                      #----------------------------------------------------------------------
-                                      #Ran 9 tests in 0.014s
-                                      #FAILED (failures=2)
+conda install qiime -c bioconda       #tried this and it mostly worked.... 
+                                          #QIIME base install test results
+                                          #===============================
+                                          #F.......F
+                                          #======================================================================
+                                          #FAIL: test_FastTree_supported_version (__main__.QIIMEDependencyBase)
+                                          #FastTree is in path and version is supported
+                                          #----------------------------------------------------------------------
+                                          #Traceback (most recent call last):
+                                          #File "/mnt/home/rennickb/anaconda3/envs/qiime1/bin/print_qiime_config.py", line 343, 
+                                          #in test_FastTree_supported_version 
+                                          #"which components of QIIME you plan to use.")
+                                          #AssertionError: FastTree not found. This may or may not be a problem depending on which components of QIIME you plan to use.
+                                          #======================================================================
+                                          #FAIL: test_uclust_supported_version (__main__.QIIMEDependencyBase)
+                                          #uclust is in path and version is supported
+                                          #----------------------------------------------------------------------
+                                          #Traceback (most recent call last):
+                                          #  File "/mnt/home/rennickb/anaconda3/envs/qiime1/bin/print_qiime_config.py", line 322, 
+                                          #in test_uclust_supported_version
+                                          #"which components of QIIME you plan to use.")
+                                          #AssertionError: uclust not found. This may or may not be a problem depending on which components of QIIME you plan to use.
+                                          #----------------------------------------------------------------------
+                                          #Ran 9 tests in 0.014s
+                                          #FAILED (failures=2)
 #------------------------------------------------------------------------------------------------------------------------------------                                 
-                                  #Not sure if those two (FastTree & uclust) are important... 
+                                  #I dont think I need FastTree & uclust... 
                                   #I'm going to try demultiplexing and see what my outputs look like. 
+#------------------------------------------------------------------------------------------------------------------------------------
+                                  #Demultiplexing worked great. qiime1 is working.
+                                        #[rennickb@dev-intel14 20210402_Amplicon_PE300]$ cd demultiplexed_R1_test/
+                                        #[rennickb@dev-intel14 demultiplexed_R1_test]$ ll
+                                        #total 22944769
+                                        #-rw-r----- 1 rennickb plp847_fs2018         131 Mar 10 10:55 histograms.txt
+                                        #-rw-r----- 1 rennickb plp847_fs2018 14870228211 Mar 10 10:55 seqs.fastq
+                                        #-rw-r----- 1 rennickb plp847_fs2018  8625115667 Mar 10 10:55 seqs.fna
+                                        #-rw-r----- 1 rennickb plp847_fs2018        4444 Mar 10 10:55 split_library_log.txt
+
+                                 
 
 
 
