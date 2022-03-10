@@ -3,13 +3,12 @@
 #These are the steps I took in installing qiime1
 
 
-
+conda -V                                #I am running conda 4.11.0
 conda info --envs                       #I had no qiime1 env
 
 
 conda create -n qiime1 python=2.7 qiime matplotlib=1.4.3 mock nose -c bioconda
-
-#this returned errors: PackagesNotFoundError: The following packages are not available from current channels:  - matplotlib=1.4.3
+                                        #this returned errors: PackagesNotFoundError: The following packages are not available from current channels:  - matplotlib=1.4.3
 
 
 conda create -n qiime1 python=2.7       #this worked to create the base env
@@ -70,9 +69,9 @@ conda install qiime -c bioconda       #tried this again and it mostly worked....
                                       #----------------------------------------------------------------------
                                       #Ran 9 tests in 0.014s
                                       #FAILED (failures=2)
-                                  
-                                   
-#Not sure if those two (FastTree & uclust) are important... I'm going to try demultiplexing and see what my outputs look like. 
+#------------------------------------------------------------------------------------------------------------------------------------                                 
+                                  #Not sure if those two (FastTree & uclust) are important... 
+                                  #I'm going to try demultiplexing and see what my outputs look like. 
 
 
 
