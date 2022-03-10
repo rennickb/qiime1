@@ -4,7 +4,7 @@
 
 
 
-conda info --envs                    #I had no qiime1 env
+conda info --envs                       #I had no qiime1 env
 
 
 conda create -n qiime1 python=2.7 qiime matplotlib=1.4.3 mock nose -c bioconda
@@ -12,7 +12,7 @@ conda create -n qiime1 python=2.7 qiime matplotlib=1.4.3 mock nose -c bioconda
 #this returned errors: PackagesNotFoundError: The following packages are not available from current channels:  - matplotlib=1.4.3
 
 
-conda create -n qiime1 python=2.7                          #this worked to create the base env
+conda create -n qiime1 python=2.7       #this worked to create the base env
 
 conda activate qiime1
 pip install numpy                       #going to try to pip instal 
